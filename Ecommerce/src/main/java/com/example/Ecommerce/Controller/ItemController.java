@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -35,6 +36,13 @@ public class ItemController {
         }
         return new ResponseEntity<>("Item Not Present" , HttpStatus.NOT_FOUND);
     }
+
+    @GetMapping("/get/All-Item")
+    public ResponseEntity getAllItems(){
+        List<Item> itemList = itemService.getAllItems();
+        return new ResponseEntity<>(itemList , HttpStatus.FOUND);
+    }
+
 
     @PutMapping("/update-item")  // REST API to Update the name , description with given id
     public ResponseEntity updateDescription(@RequestParam int id ,@RequestParam String newName , @RequestParam String newDescription){

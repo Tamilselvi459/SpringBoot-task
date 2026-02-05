@@ -29,4 +29,12 @@ public class ItemRepository {
         return Optional.empty();
 
     }
+
+    public List<Item> getAllItems() {
+        List<Item> allItemList = new ArrayList<>();
+        for(Item item : itemList){
+            allItemList.add(item);
+        }
+        return allItemList;
+    }
 }

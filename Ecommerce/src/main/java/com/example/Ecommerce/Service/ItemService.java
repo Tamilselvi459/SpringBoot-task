@@ -7,6 +7,7 @@ import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -47,9 +48,15 @@ public class ItemService {
             getItem.setId(id);
             getItem.setName(newName);
             getItem.setDescription(newDescription);
-            itemRepository.addItem(getItem);
+            //itemRepository.addItem(getItem);
             return "Item updated successfully";
         }
         return "Id Not Found";
+    }
+
+    // REST API to get All Items
+
+    public List<Item> getAllItems() {
+        return itemRepository.getAllItems();
     }
 }
