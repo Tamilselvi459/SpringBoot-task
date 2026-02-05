@@ -13,13 +13,14 @@ This project is a sample Spring Boot REST API developed as part of a technical t
 ## Features
 - Create Item
 - Get Item by ID
-- Update Item
+- Get All Item
+- Update Item by ID
 - Validation using @NotNull, @NotBlank
 
 ## API Endpoints
 - POST /items
 - GET /items/{id}
-- GET /items
+- GET /All items
 - PUT /items/{id}
 
 
