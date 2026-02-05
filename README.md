@@ -2,12 +2,15 @@
 
 ## Project Description
 This project is a sample Spring Boot REST API developed as part of a technical task.
+Simple Spring Boot REST API for managing items (Ecommerce).
+Uses in-memory storage (ArrayList) and exposes REST endpoints.
 
 ## Technologies Used
 - Java
 - Spring Boot
 - Spring Web
 - Lombok
+- Validation
 - Maven
 
 ## Features
